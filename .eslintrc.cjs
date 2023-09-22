@@ -26,7 +26,9 @@ module.exports = {
     "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
     "prettier/prettier": ["error", { endOfLine: "auto" }],
     "import/no-unresolved": 0,
-    // Define your custom ESLint rules here, if needed.
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "consistent-return": "off",
   },
   settings: {
     react: {
