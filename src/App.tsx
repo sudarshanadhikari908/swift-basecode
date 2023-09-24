@@ -1,33 +1,19 @@
 import "./App.css";
-import React, { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import React, { Suspense } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ErrorBoundary } from "@shared/hoc/ErrorBoundary.tsx";
+import Loader from "@shared/components/loader/index.tsx";
+import AppRoutes from "./AppRoutes.tsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button" onClick={() => setCount((c) => c + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <ErrorBoundary>
+      <Suspense fallback={<Loader />}>
+        <ToastContainer />
+        <AppRoutes />
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 

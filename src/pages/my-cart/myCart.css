@@ -1,0 +1,49 @@
+/* YourComponent.css */
+
+.container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add some gap around sections */
+  }
+  
+  .my-cart-section {
+    flex: 2; /* 2/3 of the width */
+    display: flex;
+    flex-direction: column; /* Change to a column layout */
+    gap: 20px; /* Add gap between cards */
+  }
+  
+  .action-card {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border: 1px solid #eee4e4; 
+    border-radius: 5px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .action-card div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carts {
+    flex: 2; /* 2/3 of the width, same as action-card */
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  
+  .checkout-section {
+    flex: 1; /* 1/3 of the width */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #eee4e4;
+    border-radius: 5px;
+    text-align: center;
+  }
+  

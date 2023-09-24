@@ -1,0 +1,117 @@
+/* Cart.css */
+
+/* ... Other CSS rules ... */
+
+.cart {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.cart:hover {
+  transform: translateY(-5px);
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px; /* Moved checkbox to the right */
+}
+
+.checkbox-label {
+  font-size: 14px;
+  user-select: none;
+}
+
+.checkbox-input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.checkbox-input:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.checkbox-input:checked::after {
+  content: "✔";
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cart-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.cart h3 {
+  font-size: 18px;
+  margin-right: 10px; /* Added margin to separate title from input */
+}
+
+.quantity-input {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-input input {
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: not-allowed;
+}
+ 
+
+.price-info {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.price-info p {
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+.discount-percentage {
+  font-size: 16px;
+  color: #ff5733; /* Red color for discount percentage */
+}
+.cart.total {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.total-info {
+  flex: 1;
+  text-align: center;
+}
+
+.total-info p {
+  font-size: 14px;
+  margin: 2px 0;
+}

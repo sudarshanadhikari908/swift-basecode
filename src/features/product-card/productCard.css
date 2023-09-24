@@ -1,0 +1,176 @@
+/* ProductCard.css */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-bottom: 20px; /* Adjust the space at the bottom */
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* You can add additional styling as needed */
+}
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.product-thumbnail {
+  width: auto;
+  height: 150px;
+}
+
+.product-info {
+  flex: 2;
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #007bff; /* Blue price color */
+  margin-bottom: 8px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  margin-right: 8px;
+  color: #777;
+}
+
+.discounted-price {
+  color: #e91e63; /* Pink discounted price color */
+}
+
+.product-rating {
+  font-size: 0.9rem;
+  color: #ff9800; /* Orange rating color */
+  margin-bottom: 8px;
+}
+
+.product-stock {
+  font-size: 0.9rem;
+  color: #4caf50; /* Green stock color */
+  margin-bottom: 8px;
+}
+
+.product-branch {
+  font-size: 0.9rem;
+  color: #795548; /* Brown branch color */
+  margin-bottom: 8px;
+}
+
+.product-category {
+  font-size: 0.9rem;
+  color: #2196f3; /* Blue category color */
+  margin-bottom: 8px;
+}
+.add-to-cart-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* Other styles for the add-to-cart container */
+}
+
+.add-to-cart-button {
+  margin-top: auto;
+  background-color: #000; /* Set the background color to black */
+  color: #fff; /* Text color to white */
+  padding: 12px 0; /* Adjust padding to expand button width */
+  border: none;
+  width: 100%; /* Make the button full width */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #333;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.quantity-button {
+  background-color: #007bff; /* Change to your desired button color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 50%;
+  width: 30px; /* Adjust the button width */
+  height: 30px; /* Adjust the button height */
+  font-size: 20px; /* Adjust the font size */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content vertically and horizontally */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+
+  &:hover {
+    background-color: #0056b3; /* Change to your desired hover color */
+  }
+
+  /* Disabled style */
+  &:disabled {
+    background-color: #ccc; /* Change to your desired disabled color */
+    cursor: not-allowed;
+  }
+}
+
+.quantity-input {
+  height: 30px;
+  width: 10%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px; /* Adjust the font size */
+  text-align: center;
+}
+
+.confirm-button {
+  width: 100%;
+  background-color: #000; /* Set the background color to black */
+  color: #fff; /* Text color to white */
+  padding: 12px 0; /* Adjust padding to expand button width */
+  /* padding: 4px 8px; */
+  display: block;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirm-button:hover {
+  background-color: #333;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+}
+
+/* ... (existing styles) */

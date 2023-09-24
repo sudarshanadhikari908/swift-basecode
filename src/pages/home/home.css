@@ -1,0 +1,7 @@
+.product-card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Display 5 cards per row */
+    gap: 20px; /* Gap between cards */
+    padding: 20px; /* Padding for the container */
+    justify-content: center; /* Center the grid horizontally */
+  }
