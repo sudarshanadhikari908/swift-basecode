@@ -1,0 +1,90 @@
+/* Styles for the entire table */
+
+.table-layout {
+  margin-top: 140px;
+}
+
+.table-container {
+  width: 70%;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: auto;
+  padding-left: 0; 
+}
+
+/* Styles for the "card" sections */
+.table-card {
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Styles for the table header */
+.table-header {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+/* Styles for table cells in header */
+.table-cell {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Styles for the table body */
+.table-body {
+  flex-direction: column;
+}
+
+/* Styles for table rows in the body */
+.table-row {
+}
+
+/* Styles for the table footer */
+.table-footer {
+  background-color: #ffffff;
+  font-weight: bold;
+  gap: 5px;
+}
+/* Remove top border for the first footer cell */
+.table-footer .table-cell:first-child {
+  border: none;
+}
+
+.delete-cart:hover {
+  color: #fc5c32;
+}
+
+.cart-clear-button {
+  flex-direction: row;
+  background-color: #fff;
+  border: 1px solid #fc5c32;
+}
+.cart-clear-button:hover {
+  color: #fff;
+  background-color: #fc5c32;
+}
+
+.cart-buy-button {
+  background-color: #fc5c32;
+  border: 1px solid #fc5c32;
+  margin-left: 80px;
+}
+
+.total-amount {
+  text-align: left;
+}
+
+.buy-now-button {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fc5c32;
+  border: 1px solid #fc5c32;
+  color: white;
+}
+
+

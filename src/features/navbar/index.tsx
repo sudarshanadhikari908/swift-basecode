@@ -1,22 +1,27 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./navbar.css"; // Import your CSS file for styling
 import { ShoppingCart } from "lucide-react";
 import { useAppDispatch, useAppSelector } from "@store/redux-Hooks";
-import { getUserCart } from "@store/actions/cart";
+import useDebouncedSearch from "@shared/utils/debounced-search-hook";
+import { getAllProducts } from "@store/actions/product";
 
 function NavBar() {
-  const dispatch = useAppDispatch();
   const { cartList } = useAppSelector((state) => state.carts);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const { debouncedQuery } = useDebouncedSearch(searchQuery);
   const navigate = useNavigate();
-
+  const location = useLocation();
+  const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(getUserCart());
-  }, []);
+    if (location?.pathname === "/") {
+      dispatch(getAllProducts({ searchQuery: debouncedQuery }));
+    }
+  }, [debouncedQuery]);
 
   return (
     <div className="navbar">
-      <div className="left">
+      <div className="left" onClick={() => navigate("/")}>
         <img src="/logo.png" alt="Logo" className="logo" />
       </div>
       <div className="center">
@@ -24,14 +29,13 @@ function NavBar() {
           type="text"
           placeholder="Search products..."
           className="search-input"
+          onChange={(e: any) => setSearchQuery(e?.target?.value)}
         />
       </div>
       <div className="right" onClick={() => navigate("/my-cart")}>
         <div className="cart-icon">
           <ShoppingCart />
-          <span className="cart-count">
-            {cartList?.carts[0]?.totalProducts}
-          </span>
+          <span className="cart-count">{cartList ? cartList?.length : 0}</span>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import cartSlice from "@store/reducers/cart";
 
 const persistConfig = {
   key: "root",
+  blackList: ["productsSlice"],
   storage,
 };
 

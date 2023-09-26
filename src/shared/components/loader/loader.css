@@ -15,7 +15,7 @@
   
   .loader {
     border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
+    border-top: 8px solid #fc5c32;
     border-radius: 50%;
     width: 80px; /* Increase the width to make it larger */
     height: 80px; /* Increase the height to make it larger */

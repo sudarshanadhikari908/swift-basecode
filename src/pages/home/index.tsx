@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <NavBar />
-      <div className="product-card-container">
+      <div className="product-card-container mt-60">
         {productList ? (
           productList?.products?.map((product: IProduct) => (
             <ProductCard key={product.id} product={product} />
